@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="style/note.css" rel="stylesheet">
+    <script src="js/noteJS.js"></script>
+</head>
+<body>
+    <div class="body">
+        <div class="left"></div>
+        <div class="right">
+            <h2 id="DOTween基础方法">DOTween基础方法</h2>
+            <p>DOTween中为我们准备了一些基础的移动或是旋转方法</p>
+            <img src="img/DOTween/1.png">
+            <p>这些方法见名知意，只需要传入指定的参数就能运行。</p>
+            <p>而且每一个移动或是旋转、缩放的对象都有一个对应local方法，用于相对于自身的操作。想要在transform中这样调用方法先需要引入命名空间</p>
+            <p>using DG.Tweening</p>
+            <p>引入命名空间后就能直接调用DOTween准备好的一些方法。</p>
+        </div>
+        <div class="right">
+            <h2 id="物理模拟方法">物理模拟方法</h2>
+            <h3>弹跳模拟</h3>
+            <img src="img/DOTween/2.png">
+            <p>运行这个方法可以得到一个弹跳效果</p>
+            <p>这里的最后一个参数提到了反方向力，可以理解为，当反方向力为0时，物体每次弹起落下的点只会是它弹起时的位置，如果大于0时，那么落下时就会附加一个冲击力让它落下的点超过起跳的点。</p>
+        </div>
+        <div class="right">
+            <h2 id="震动动画">震动动画</h2>
+            <img src="img/DOTween/3.png">
+            <br>
+        </div>
+        <div class="right">
+            <h2 id="混合移动">混合移动</h2>
+            <img src="img/DOTween/4.png">
+            <br>
+        </div>
+        <div class="right">
+            <h2 id="改变颜色">改变颜色</h2>
+            <img src="img/DOTween/5.png">
+            <br>
+        </div>
+        <div class="right">
+            <h2 id="透明">透明</h2>
+            <img src="img/DOTween/6.png">
+            <br>
+        </div>
+        <div class="right">
+            <h2 id="渐变颜色">渐变颜色</h2>
+            <img src="img/DOTween/7.png"><br>
+        </div>
+        <div class="right">
+            <h2 id="变色">变色</h2>
+            <img src="img/DOTween/8.png"><br>
+        </div>
+        <div class="right">
+            <h2 id="混合颜色">混合颜色</h2>
+            <img src="img/DOTween/9.png">
+            <br>
+        </div>
+        <div class="right">
+            <h2 id="摄影机">摄影机</h2>
+            <img src="img/DOTween/10.png">
+            <br>
+            <img src="img/DOTween/11.png">
+            <br>
+        </div>
+        <div class="right">
+            <h2 id="队列">队列</h2>
+            <img src="img/DOTween/12.png">
+            <p>sequence.Append方法用来在队列里添加动画</p>
+            <p>sequence.AppendInterval方法用来在队列里设置等待时间</p>
+            <br>
+        </div>
+        <div class="right">
+            <h2 id="队列插入动画">队列插入动画</h2>
+            <img src="img/DOTween/13.png">
+            <p>插入动画时需要注意动画被覆盖这种问题，需要根据不同的情况使用不同的插入方式</p>
+        </div>
+        <div class="right">
+            <h2 id="队列倒着执行">队列倒着执行</h2>
+            <img src="img/DOTween/14.png">
+            <p>通过上图所示的函数，可以让队列中的动画先入后出，最后添加的反而最先执行。</p>
+            <p></p>
+        </div>
+        <div class="right">
+            <h2 id="回调函数">回调函数</h2>
+            <img src="img/DOTween/15.png">
+            <p>这里的几个Test都是函数名，只需要写函数名就行，不用带括号</p>
+            <br>
+        </div>
+        <div class="right">
+            <h2 id="动画参数">动画参数</h2>
+            <img src="img/DOTween/16.png">
+            <br>
+        </div>
+        <div class="right">
+            <h2 id="From">From函数</h2>
+            <img src="img/DOTween/17.png">
+            <p>这里的from函数如上图所示是有两种用法的</p>
+            <p>如果没有参数就可以理解成动画倒放,会将终点作为起始点，从终点向起始点运动</p>
+            <p>如果加上了true则是将目标点作为方向进行运动</p>
+            <p>除了From外还有SetRelative也能修改运动参数</p>
+            <img src="img/DOTween/19.png">
+            <p></p>
+        </div>
+        <div class="right">
+             <h2 id="延时动画">延时动画</h2>
+            <p>除了通过插入时间来实现延时外，还可以通过设置参数指定动画延时执行。</p>
+            <img src="img/DOTween/18.png">
+        </div>
+        <div class="right">
+            <h2 id="动画更新帧">动画更新帧</h2>
+            <img src="img/DOTween/20.png">
+            <p>动画帧一般使用默认的，没有特殊情况不会改动</p>
+            <br>
+        </div>
+        <div class="right">
+            <h2 id="路径动画">路径动画</h2>
+            <img src="img/DOTween/21.png">
+            <p></p>
+        </div>
+    </div>
+</body>
+</html>

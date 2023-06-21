@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="style/note.css" rel="stylesheet">
+    <script src="js/noteJS.js"></script>
+</head>
+<body>
+    <div class="body">
+        <div class="left">
+
+        </div>
+        <div class="right">
+            <h2 id="git使用前配置">git使用前配置</h2>
+            <p>在使用git钱，需要告诉git你是谁，在向git仓库中提交时需要用到。</p>
+            <ul>
+                <li>配置提交人姓名：git config --global user.name 提交人姓名</li>
+                <li>配置提交人邮箱：git config --global user.email 提交人邮箱</li>
+                <li>查看git配置信息：git config --list</li>
+            </ul>
+            <p>如果需要修改以上信息，只需要再次执行配置命令即可</p>
+            <p>配置命令只需执行一次。之后切换仓库也是这个信息。</p>
+        </div>
+        <div class="right">
+            <h2 id="git提交步骤">git提交步骤</h2>
+            <ul>
+                <li>git init 初始化git仓库</li>
+                <li>git status 查看文件状态</li>
+                <li>git add 文件 添加文件进入追踪状态</li>
+                <li>git commit -m 提交信息 向仓库提交版本</li>
+                <li>git log 查看提交记录</li>
+            </ul>
+        </div>
+        <div class="right">
+            <h2 id="git撤销">git撤销</h2>
+            <p>用暂存区文件覆盖工作目录中的文件：git checkout 文件名</p>
+            <p>将文件从暂存区中删除：git rm --cached 文件名</p>
+            <p>将git仓库中指定的更新记录恢复过来，并且覆盖暂存区和工作目录：git reset --hard 提交id</p>
+        </div>
+        <div class="right">
+            <h2 id="分支命令">分支命令</h2>
+            <ul>
+                <li>git branch 查看分支</li>
+                <li>git branch 分支名称 创建分支</li>
+                <li>git checkout 分支名称 切换分支(切换时一定要注意提交文件，如果暂存区有文件没提交那这个文件就会出现在切换后的分支中，造成文件混乱)</li>
+                <li>git merge 来源分支 合并分支</li>
+                <li>git branch -d 分支名称 删除分支（只有合并分支后才允许删除，-D强制删除）</li>
+            </ul>
+        </div>
+        <div class="right">
+            <h2 id="暂时保存分支">暂时保存分支</h2>
+            <p>在git中，可以暂时提取分支上所有的改动并存储，让开发人员得到一个干净的工作副本，从而临时转向其他副本</p>
+            <p>使用场景：分支临时切换</p>
+            <p>临时存储改动：git stash</p>
+            <p>恢复改动：git stash pop</p>
+        </div>
+    </div>
+</body>
+</html>

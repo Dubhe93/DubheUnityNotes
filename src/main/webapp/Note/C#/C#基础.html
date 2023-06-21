@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="style/note.css" rel="stylesheet">
+    <script src="js/noteJS.js"></script>
+</head>
+<body>
+    <div class="body">
+        <div class="left">
+        </div>
+
+        <div class="right">
+            <h2 id="c#项目结构">
+                c#项目结构
+            </h2>
+            <img src="img/01/C%23目录结构.png">
+            <p>C#的目录结构如图所示</p>
+            <p>一个项目必须有解决方案，一个解决方案可以对应多个项目<p/>
+            <p>项目默认会导入System命名空间，C#的命令空间和java的包类似，只有导入对应的命名空间才能使用对应的类的方法</p>
+            <br>
+        </div>
+        <div class="right">
+            <h2 id="c#数据类型">
+                c#数据类型
+            </h2>
+            <p>C#的数据类型分为三种</p>
+            <ul>
+                <li>值类型</li>
+                <li>引用类型</li>
+                <li>指针类型</li>
+            </ul>
+            <h3 class="red">值类型</h3>
+            <p>值类型变量可以直接分配给一个值。它们是从类 System.ValueType 中派生的。</p>
+            <p>值类型有</p>
+            <table class="table table-hover">
+                <tr>
+                    <td>类型</td>
+                    <td>描述</td>
+                    <td>范围</td>
+                    <td>默认值</td>
+                </tr>
+                <tr>
+                    <td class="red">bool</td>
+                    <td>布尔值</td>
+                    <td>true或false</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td class="red">byte</td>
+                    <td>8位无符号整数</td>
+                    <td>0到255</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td class="red">char</td>
+                    <td>16位Unicode字符</td>
+                    <td>U+0000到U+ffff</td>
+                    <td>'\n'</td>
+                </tr>
+                <tr>
+                    <td>decimal</td>
+                    <td>128位精确的十进制值，28-29有效位数</td>
+                    <td>(-7.9 x 10<sup>28</sup>到7.9 x 10<sup>28</sup>)/10<sup>0到28</sup></td>
+                    <td>0.0M</td>
+                </tr>
+                <tr>
+                    <td class="red">double</td>
+                    <td>64 位双精度浮点型</td>
+                    <td>(+/-)5.0 x 10<sup>-324</sup>到(+/-)1.7 x 10<sup>308</sup></td>
+                    <td>0.0D</td>
+                </tr>
+                <tr>
+                    <td class="red">float</td>
+                    <td>32 位单精度浮点型</td>
+                    <td>-3.4 x 10<sup>38</sup> 到 + 3.4 x 10<sup>38</sup></td>
+                    <td>0.0F</td>
+                </tr>
+                <tr>
+                    <td class="red">int</td>
+                    <td>32位有符号整数类型</td>
+                    <td>-2,147,483,648 到 2,147,483,647</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td class="red">long</td>
+                    <td>64 位有符号整数类型</td>
+                    <td>-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807</td>
+                    <td>0L</td>
+                </tr>
+                <tr>
+                    <td>sbyte</td>
+                    <td>8 位有符号整数类型</td>
+                    <td>-128 到 127</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td class="red">short</td>
+                    <td>16 位有符号整数类型</td>
+                    <td>-32,768 到 32,767</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>uint</td>
+                    <td>32 位无符号整数类型</td>
+                    <td>0 到 4,294,967,295</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>ulong</td>
+                    <td>64 位无符号整数类型</td>
+                    <td>0 到 18,446,744,073,709,551,615</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>ushort</td>
+                    <td>16 位无符号整数类型</td>
+                    <td>16 位无符号整数类型</td>
+                    <td>0</td>
+                </tr>
+            </table>
+            <p class="red">红色为常用数据类型</p>
+            <br>
+            <h3 class="red">引用类型</h3>
+            <p>面向对象中new出来的对象都是引用类型</p>
+            <p>C#默认自带的引用类型有object（所有类的父类）、dynamic（动态数据类型，可以存储任何值）、string（字符型）</p>
+            <br>
+            <h3 class="red">指针类型</h3>
+            <p>指针类型变量存储另一种类型的内存地址。C# 中的指针与 C 或 C++ 中的指针有相同的功能。</p>
+            <p>例如：int* iptr;</p>
+            <br>
+        </div>
+        <div class="right">
+            <h2 id="交换变量">交换变量值</h2>
+            <p>int a=1;int b=2;</p>
+            <h3>方法1：</h3>
+            <p>int c=a;</p>
+            <p>a=b;</p>
+            <p>b=c;</p>
+            <p class="red">这种方法简洁运行速度快，但需要开辟空间，内存占用大（项目中常用这种方法）</p>
+            <h3>方法2：</h3>
+            <p>a=a+b;</p>
+            <p>b=a-b</p>
+            <p>a=a-b</p>
+            <p class="red">这种方法需要三次计算速度慢，但内存占用小（只有项目有特殊要求时可能才会使用）</p>
+        </div>
+        <div class="right">
+            <h2 id="条件语句">条件语句</h2>
+            <p>条件判断语句if</p>
+            <img src="img/01/ifelse.png">
+            <img src="img/01/elseif.png">
+            <br>
+            <p>条件判断语句switch</p>
+            <img src="img/01/switch.png">
+            <p class="red">switch 适合值确定的情况下使用，if 适合值不确定处于某一个范围时使用</p>
+            <p class="red">能用switch写的if都能实现，但能用if写的switch不一定能实现</p>
+        </div>
+        <div class="right">
+            <h2 id="循环语句">循环语句</h2>
+            <img src="img/01/循环语句.png">
+
+        </div>
+        <div class="right">
+            <h2 id="数组">数组</h2>
+            <p>数组属于引用数据类型，用于存储多个数据。</p>
+            <p>数组的长度是锁定的，一旦给定就不能修改长度。</p>
+            <img src="img/01/数组.png">
+            <p>由于数组是引用数据类型，所以数据之间赋值传递的是引用地址。</p>
+            <p>例如：</p>
+            <img src="img/01/数组内存地址.png">
+            <br>
+            <h3>数组中常用的方法</h3>
+            <table>
+                <tr>
+                    <td>方法名</td>
+                    <td>说明</td>
+                </tr>
+                <tr>
+                    <td>Array.IndexOf(数组,搜索的值)</td>
+                    <td>在一个一维数组中搜索指定对象，并返回其首个匹配项的索引</td>
+                </tr>
+                <tr>
+                    <td>Array.Resize(ref 数组,大小)</td>
+                    <td>将一维数组的元素数更改为指定的新大小。</td>
+                </tr>
+                <tr>
+                    <td>Array.Sort(数组)</td>
+                    <td>使用 System.Array 中每个元素的 System.IComparable 实现，对整个一维 System.Array 中的元素进行排序。</td>
+                </tr>
+            </table>
+        </div>
+        <div class="right">
+            <h2 id="字符串类">字符串类</h2>
+            <p>字符串类实际是一个字符数组，但不完全属于数组</p>
+            <p>例如：它虽然可以像数组那样通过下标取出值，但不能像数组那样修改值</p>
+            <img src="img/01//字符串数组特性.png">
+            <h3>字符串常用方法</h3>
+            <table>
+                <tr>
+                    <td>方法名</td><td>说明</td>
+                </tr>
+                <tr>
+                    <td>string.Contains(string value)</td>
+                    <td>判断字符串中是否存在值value</td>
+                </tr>
+                <tr>
+                    <td>string.Equals(string value)</td>
+                    <td>判断两个字符串是否相等</td>
+                </tr>
+                <tr>
+                    <td>string.IndexOf(string/char value)</td>
+                    <td>返回字符串或字符value在字符串中第一次出现的位置</td>
+                </tr>
+                <tr>
+                    <td>string.Split(string value)</td>
+                    <td>切割字符串，通过字符value对字符串进行切割</td>
+                </tr>
+                <tr>
+                    <td>string.ToCharArray()</td>
+                    <td>将字符串转换换成字符数组</td>
+                </tr>
+                <tr>
+                    <td>string.ToLower();</td>
+                    <td>将字符串中字母都转换为小写</td>
+                </tr>
+                <tr>
+                    <td>string.ToUpper()</td>
+                    <td>将字符串中的字母都转换成大写</td>
+                </tr>
+                <tr>
+                    <td>string.Trim()</td>
+                    <td>去除字符串前后的空格</td>
+                </tr>
+            </table>
+        </div>
+        <div class="right">
+            <h2 id="参数数组">参数数组</h2>
+            <p>当我们创建一个方法，在不清楚参数个数的时候，可以将参数设置成数组来解决</p>
+            <p>但每次传递参数都需要重新创建一个数组，就很麻烦，这时就可以使用参数数组</p>
+            <h3 class="red">params</h3>
+            <p>被params修饰的形参必须是一个数组，而且位于形参的最后一位，之后调用方法就可以不用创建数组，只需要传输对应的参数即可</p>
+            <img src="img/01/数组参数.png">
+            <br>
+        </div>
+        <div class="right">
+            <h2 id="常量">常量</h2>
+            <p>C#中的常量通过const修饰，一旦修饰直至程序结束运行，其值不能修改。</p>
+            <p>使用 const 关键字来声明某个常量字段或常量局部变量。 常量字段和常量局部变量不是变量并且不能修改。 常量可以为数字、布尔值、字符串或 null 引用。</p>
+            <br>
+        </div>
+        <div class="right">
+            <h2 id="枚举">枚举</h2>
+            <img src="img/01/枚举.png">
+            <p>枚举类型 是由基础整型数值类型的一组命名常量定义的值类型。 若要定义枚举类型，请使用 enum 关键字并指定枚举成员 的名称</p>
+            <p>默认情况下，枚举成员的关联常数值为类型 int；它们从零开始，并按定义文本顺序递增 1。 可以显式指定任何其他整数数值类型作为枚举类型的基础类型。</p>
+            <p>枚举的底层用的是整型，枚举的成员名称相当于变量名，在不赋值的情况下默认从第一个成员开始赋值，从0开始。</p>
+            <p>这么做的好处是数据通过整型存储体积小，相互对比判断速度快，而展示给用户时展示成员名，规范了命令也能更好的理解</p>
+            <br>
+        </div>
+        <div class="right">
+            <h2 id="结构体">结构体</h2>
+            <p>C#的结构体就和Java的实体类类似，由一个结构体名和结构体内部变量构成</p>
+            <img src="img/01/结构体.png">
+            <p>结构体内部可以写函数</p>
+            <br>
+        </div>
+        <div class="right">
+            <h2 id="委托">委托</h2>
+            <h3 class="red">委托方法在项目中经常使用</h3>
+            <p>使用委托时需要先进行声明，声明方法和定义函数类似但不需要函数体</p>
+            <img src="img/01/委托.png">
+            <p class="red">在实际开发中我们每个人都是负责一个模块，如果我们都在开发中，都没有做完，也不知道对方怎么写的，但负责实现玩家死亡的模块的人需要调用死亡UI</p>
+            <p class="red">而负责开发ui的人还没有写死亡UI的的函数，这时就可以使用委托。在人物死亡的函数中留下一个委托，之后调用人物死亡函数的开发者只需要调用时将死亡ui的函数名传输进入死亡函数就行了</p>
+            <img src="img/01/委托案例.png">
+            <p>委托数组写法</p>
+            <img src="img/02/1.png">
+            <p class="red"><b>Action委托和Func委托</b></p>
+            <p>这两个委托是C#为我们准备的委托</p>
+            <p>一些简单的委托可以通过它们直接实现，为我们节省时间</p>
+            <p>Action委托可以指向无返回值的方法</p>
+            <img src="img/01/1.png">
+            <p>Func委托和Action委托不同，Func必须带有返回值</p>
+            <img src="img/01/2.png">
+            <p>Func的返回值必须是最后一位，前几位可以作为参数，如果没有参数就不写，但返回值一定要。</p>
+            <br>
+            <p><b>委托案例</b></p>
+            <p>现在有很多个学生类，在一个数组中存储，想要将这些学生按年龄从小到大排列</p>
+            <p>学生类</p>
+            <img src="img/01/3.png">
+            <p>排序方法</p>
+            <img src="img/01/4.png">
+            <p>调用</p>
+            <img src="img/01/5.png">
+            <p><b>多播委托</b></p>
+            <img src="img/01/6.png">
+            <p><b>匿名委托</b></p>
+            <img src="img/01/7.png">
+            <p><b>Lambda表达式形式的委托</b></p>
+            <img src="img/01/8.png">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+
+.left{
+    height: 600px;
+    width: 25%;
+    float: left;
+    margin-top: 20px;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(88deg, #8BC6EC 0%, #9599E2 100%);
+    border-radius: 10px;
+    overflow: auto;
+    position: fixed;
+}
+.left span{
+    display: block;
+    margin:5px auto;
+    width: 80%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    background-color: #8BC6EC;
+    border-radius: 20px;
+}
+.left span:hover{
+    background-color: #9599E2;
+}
+.right{
+    width: 68%;
+    float: right;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(88deg, #8BC6EC 0%, #9599E2 100%);
+    padding:5px 1%;
+}
+.right img{
+    display: block;
+    margin-left: 30px;
+    width: 60%;
+    border-radius: 10px;
+}
+.right p{
+    font-size: 16px;
+}
+.right p,h3,a,ul{
+    display: block;
+    width: 95%;
+    margin:10px auto;
+}
+.red{
+    color: red;
+}
+a{
+    text-decoration:none;
+    color: coral;
+}
+iframe{
+    width: 100%;
+    height: 70px;
+    border: none;
+    margin: auto;
+}
+table{
+    width: 80%;
+    border-collapse: collapse;
+    margin:20px;
+    text-align: center;
+    border-radius: 10px;
+}
+table td,table th{
+    border: 1px solid #cad9ea;
+    color: #666;
+    height: 30px;
+}
+table thead th{
+    background-color: #CCE8EB;
+    width: 100px;
+}
+table tr:nth-child(odd){
+    background:#fff;
+}
+table tr:nth-child(even){
+    background: #F5FAFA;
+}
+.backDiv{
+    width: 90%;
+    margin: 10px 5%;
+}
